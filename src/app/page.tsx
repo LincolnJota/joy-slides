@@ -7,15 +7,15 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const slides = [
-  { id: 1, src: '/images/1.jpg', alt: 'Slide 1' },
-  { id: 2, src: '/images/2.jpg', alt: 'Slide 2' },
-  { id: 3, src: '/images/3.jpg', alt: 'Slide 3' },
-  { id: 4, src: '/images/4.jpg', alt: 'Slide 4' },
-  { id: 5, src: '/images/5.jpg', alt: 'Slide 5' },
-  { id: 6, src: '/images/6.jpg', alt: 'Slide 6' },
-  { id: 7, src: '/images/7.jpg', alt: 'Slide 7' },
-  { id: 8, src: '/images/8.jpg', alt: 'Slide 8' },
-  { id: 9, src: '/images/9.jpg', alt: 'Slide 9' },
+  { id: 1, src: '/images/Slide1.jpg', alt: 'Slide 1' },
+  { id: 2, src: '/images/Slide2.jpg', alt: 'Slide 2' },
+  { id: 3, src: '/images/Slide3.jpg', alt: 'Slide 3' },
+  { id: 4, src: '/images/Slide4.jpg', alt: 'Slide 4' },
+  { id: 5, src: '/images/Slide5.jpg', alt: 'Slide 5' },
+  { id: 6, src: '/images/Slide6.jpg', alt: 'Slide 6' },
+  { id: 7, src: '/images/Slide7.jpg', alt: 'Slide 7' },
+  { id: 8, src: '/images/Slide8.jpg', alt: 'Slide 8' },
+  { id: 9, src: '/images/Slide9.jpg', alt: 'Slide 9' },
 ];
 
 export default function SlideShow() {
@@ -60,9 +60,23 @@ export default function SlideShow() {
     }
   }, [currentIndex]);
 
+  const isFullscreen = () => {
+    return !!document.fullscreenElement
+  }
+
+  const toggleFullscreen = () => {
+    if (!isFullscreen()) {
+      document.documentElement.requestFullscreen()
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen()
+      }
+    }
+  }
+
 
   return (
-    <div className="w-screen h-screen overflow-hidden">
+    <div onDoubleClick={() => toggleFullscreen()} className="w-screen h-screen overflow-hidden">
       <Slider ref={sliderRef} {...settings}>
         {slides.map(slide => (
           <div key={slide.id} className="w-full h-full relative">
@@ -71,6 +85,7 @@ export default function SlideShow() {
               alt={slide.alt}
               height={0}
               width={0}
+              quality={100}
               sizes='100vw'
               className="w-full h-auto object-cover"
             />
