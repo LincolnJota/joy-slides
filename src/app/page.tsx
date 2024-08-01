@@ -7,15 +7,15 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const slides = [
-  { id: 1, src: '/images/Slide1.jpg', alt: 'Slide 1' },
-  { id: 2, src: '/images/Slide2.jpg', alt: 'Slide 2' },
-  { id: 3, src: '/images/Slide3.jpg', alt: 'Slide 3' },
-  { id: 4, src: '/images/Slide4.jpg', alt: 'Slide 4' },
-  { id: 5, src: '/images/Slide5.jpg', alt: 'Slide 5' },
-  { id: 6, src: '/images/Slide6.jpg', alt: 'Slide 6' },
-  { id: 7, src: '/images/Slide7.jpg', alt: 'Slide 7' },
-  { id: 8, src: '/images/Slide8.jpg', alt: 'Slide 8' },
-  { id: 9, src: '/images/Slide9.jpg', alt: 'Slide 9' },
+  { id: 1, src: '/images/Slide1.JPG', alt: 'Slide 1' },
+  { id: 2, src: '/images/Slide2.JPG', alt: 'Slide 2' },
+  { id: 3, src: '/images/Slide3.JPG', alt: 'Slide 3' },
+  { id: 4, src: '/images/Slide4.JPG', alt: 'Slide 4' },
+  { id: 5, src: '/images/Slide5.JPG', alt: 'Slide 5' },
+  { id: 6, src: '/images/Slide6.JPG', alt: 'Slide 6' },
+  { id: 7, src: '/images/Slide7.JPG', alt: 'Slide 7' },
+  { id: 8, src: '/images/Slide8.JPG', alt: 'Slide 8' },
+  { id: 9, src: '/images/Slide9.JPG', alt: 'Slide 9' },
 ];
 
 export default function SlideShow() {
